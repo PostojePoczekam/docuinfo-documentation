@@ -1,4 +1,12 @@
-InvalidBody : 0
-MissingArgument : 1
-InvalidArgumentValue : 2
-InvalidArgumentFormat : 3
+InvalidJsonFormat : 0,
+InvalidEmailFormat : 1,
+InvalidPasswordFormat : 2,
+InvalidEmail : 3,
+InvalidPassword : 4,
+InvalidToken : 5,
+MissingArgument : 6,
+EmailTaken : 7,
+InvalidCompanyID : 8,
+ForbiddenAction : 9,
+GroupAlreadyExists : 10,
+InvalidGroupID : 11
