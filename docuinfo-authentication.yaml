@@ -27,7 +27,8 @@ paths:
           description: |-
             {
             "message": "success",
-            "token": "TOKEN"
+            "token": "TOKEN",
+            "data": { }
             }
         '400':
           description: |-
@@ -56,4 +57,3 @@ paths:
             {
             "errorCode" : 0
             }
-
