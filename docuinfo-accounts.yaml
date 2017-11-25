@@ -1,0 +1,143 @@
+---
+swagger: "2.0"
+info:
+  version: "1.0"
+  title: "docuinfo-accounts"
+host: "n8kuinozu6.execute-api.eu-central-1.amazonaws.com"
+basePath: "/Prod"
+schemes:
+- "https"
+paths:
+  /create_account:
+    post:
+      parameters:
+        - in: body
+          name: body
+          schema: 
+            required:
+              - email
+              - password
+              - data
+            properties:
+              email:
+                type: string
+              password:
+                type: string
+                description: "Minimum eight characters, lowercase letter, uppercase letter and number required"
+              data:
+                type: object
+      responses:
+        '200':
+          description: |-
+            {
+            "message": "success"
+            }
+        '400':
+          description: |-
+            {
+            "error" : "error message"
+            }
+  /update_account:
+    post:
+      parameters:
+        - in: body
+          name: body
+          schema: 
+            required:
+              - token
+              - data
+            properties:
+              token:
+                type: string
+              data:
+                type: object
+      responses:
+        '200':
+          description: |-
+            {
+            "message": "success"
+            }
+        '400':
+          description: |-
+            {
+            "error" : "error message"
+            }
+  /change_email:
+    post:
+      parameters:
+        - in: body
+          name: body
+          schema: 
+            required:
+              - token
+              - newEmail
+            properties:
+              token:
+                type: string
+              newEmail:
+                type: string
+      responses:
+        '200':
+          description: |-
+            {
+            "message": "success"
+            }
+        '400':
+          description: |-
+            {
+            "error" : "error message"
+            }
+  /change_password:
+    post:
+      parameters:
+        - in: body
+          name: body
+          schema: 
+            required:
+              - token
+              - password
+              - newPassword
+            properties:
+              token:
+                type: string
+              password:
+                type: string
+              newPassword:
+                type: string
+      responses:
+        '200':
+          description: |-
+            {
+            "message": "success"
+            }
+        '400':
+          description: |-
+            {
+            "error" : "error message"
+            }
+  /delete_account:
+    delete:
+      parameters:
+        - in: body
+          name: body
+          schema: 
+            required:
+              - token
+              - password
+            properties:
+              token:
+                type: string
+              password:
+                type: string
+      responses:
+        '200':
+          description: |-
+            {
+            "message": "success"
+            }
+        '400':
+          description: |-
+            {
+            "error" : "error message"
+            }
+

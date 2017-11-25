@@ -1,0 +1,91 @@
+swagger: '2.0'
+info:
+  version: '1.0'
+  title: docuinfo-companies
+host: yy70i1iir3.execute-api.eu-central-1.amazonaws.com
+basePath: /Prod
+schemes:
+  - https
+paths:
+  /create_company:
+    post:
+      parameters:
+        - in: body
+          name: body
+          schema: 
+            required:
+              - token
+              - data
+            properties:
+              token:
+                type: string
+              data:
+                type: object
+      responses:
+        '200':
+          description: |-
+            {
+            "message": "success",
+            "companyID" : x
+            }
+        '400':
+          description: |-
+            {
+            "error" : "error message"
+            }
+  /update_company:
+    post:
+      parameters:
+        - in: body
+          name: body
+          schema: 
+            required:
+              - token
+              - companyID
+              - data
+            properties:
+              token:
+                type: string
+              companyID:
+                type: integer
+              data:
+                type: object
+      responses:
+        '200':
+          description: |-
+            {
+            "message" : "success"
+            }
+        '400':
+          description: |-
+            {
+            "error" : "error message"
+            }
+  /delete_company:
+    delete:
+      parameters:
+        - in: body
+          name: body
+          schema: 
+            required:
+              - token
+              - companyID
+              - password
+            properties:
+              token:
+                type: string
+              companyID:
+                type: integer
+              password:
+                type: string
+      responses:
+        '200':
+          description: |-
+            {
+            "message" : "success"
+            }
+        '400':
+          description: |-
+            {
+            "error" : "error message"
+            }

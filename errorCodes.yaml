@@ -1,0 +1,4 @@
+InvalidBody : 0
+MissingArgument : 1
+InvalidArgumentValue : 2
+InvalidArgumentFormat : 3
