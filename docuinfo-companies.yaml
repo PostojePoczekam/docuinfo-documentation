@@ -33,6 +33,29 @@ paths:
             {
             "error" : "error message"
             }
+  /get_companies:
+    post:
+      parameters:
+        - in: body
+          name: body
+          schema: 
+            required:
+              - token
+            properties:
+              token:
+                type: string
+      responses:
+        '200':
+          description: |-
+            {
+            "message": "success",
+            "companies": [{ }]
+            }
+        '400':
+          description: |-
+            {
+            "error" : "error message"
+            }
   /update_company:
     post:
       parameters:
