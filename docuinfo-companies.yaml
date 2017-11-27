@@ -49,7 +49,7 @@ paths:
           description: |-
             {
             "message": "success",
-            "companies": [{ }]
+            "adminCompanies": [{ }]
             }
         '400':
           description: |-
