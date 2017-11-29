@@ -37,7 +37,7 @@ paths:
             "errorCode" : 0
             }
   /delete_group:
-    delete:
+    post:
       parameters:
         - in: body
           name: body

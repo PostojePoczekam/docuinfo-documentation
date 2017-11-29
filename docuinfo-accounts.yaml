@@ -116,7 +116,7 @@ paths:
             "error" : "error message"
             }
   /delete_account:
-    delete:
+    post:
       parameters:
         - in: body
           name: body

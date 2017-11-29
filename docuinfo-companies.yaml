@@ -62,7 +62,7 @@ paths:
             "error" : "error message"
             }
   /delete_company:
-    delete:
+    post:
       parameters:
         - in: body
           name: body
