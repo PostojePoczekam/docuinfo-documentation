@@ -1,0 +1,93 @@
+---
+swagger: "2.0"
+info:
+  version: "1.0"
+  title: "docuinfo-workers"
+host: "t3zri76bd2.execute-api.eu-central-1.amazonaws.com"
+basePath: "/Prod"
+schemes:
+- "https"
+paths:
+  /add_worker:
+    post:
+      parameters:
+        - in: body
+          name: body
+          schema: 
+            required:
+              - token
+              - companyID
+              - workerEmail
+            properties:
+              token:
+                type: string
+              companyID:
+                type: integer
+              workerEmail:
+                type: string
+      responses:
+        '200':
+          description: |-
+            {
+            "message": "success"
+            }
+        '400':
+          description: |-
+            {
+            "error" : "error message"
+            }
+  /get_workers:
+    post:
+      parameters:
+        - in: body
+          name: body
+          schema: 
+            required:
+              - token
+              - companyID
+            properties:
+              token:
+                type: string
+              companyID:
+                type: integer
+      responses:
+        '200':
+          description: |-
+            {
+            "message": "success",
+            "workers": []
+            }
+        '400':
+          description: |-
+            {
+            "error" : "error message"
+            }
+  /remove_worker:
+    post:
+      parameters:
+        - in: body
+          name: body
+          schema: 
+            required:
+              - token
+              - companyID
+              - workerID
+            properties:
+              token:
+                type: string
+              companyID:
+                type: integer
+              workerID:
+                type: integer
+      responses:
+        '200':
+          description: |-
+            {
+            "message": "success"
+            }
+        '400':
+          description: |-
+            {
+            "error" : "error message"
+            }
+
