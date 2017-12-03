@@ -41,9 +41,12 @@ paths:
           schema: 
             required:
               - token
+              - organizationID
             properties:
               token:
                 type: string
+              organizationID:
+                type: integer
       responses:
         '200':
           description: |-
@@ -93,14 +96,11 @@ paths:
             required:
               - token
               - companyID
-              - password
             properties:
               token:
                 type: string
               companyID:
                 type: integer
-              password:
-                type: string
       responses:
         '200':
           description: |-

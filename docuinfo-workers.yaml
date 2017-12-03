@@ -16,13 +16,10 @@ paths:
           schema: 
             required:
               - token
-              - companyID
               - workerEmail
             properties:
               token:
                 type: string
-              companyID:
-                type: integer
               workerEmail:
                 type: string
       responses:
@@ -44,12 +41,9 @@ paths:
           schema: 
             required:
               - token
-              - companyID
             properties:
               token:
                 type: string
-              companyID:
-                type: integer
       responses:
         '200':
           description: |-
@@ -70,13 +64,10 @@ paths:
           schema: 
             required:
               - token
-              - companyID
               - workerID
             properties:
               token:
                 type: string
-              companyID:
-                type: integer
               workerID:
                 type: integer
       responses:

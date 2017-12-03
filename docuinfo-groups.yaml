@@ -16,13 +16,10 @@ paths:
           schema: 
             required:
               - token
-              - companyID
               - name
             properties:
               token:
                 type: string
-              companyID:
-                type: integer
               name:
                 type: string
       responses:

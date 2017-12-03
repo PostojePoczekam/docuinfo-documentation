@@ -9,4 +9,7 @@ EmailTaken : 7,
 InvalidCompanyID : 8,
 ForbiddenAction : 9,
 GroupAlreadyExists : 10,
-InvalidGroupID : 11
+InvalidGroupID : 11,
+WorkerAlreadyExists : 12,
+InvalidWorkerID : 13,
+InvalidOrganizationID : 14
