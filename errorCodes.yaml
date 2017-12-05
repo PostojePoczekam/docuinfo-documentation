@@ -13,3 +13,4 @@ InvalidGroupID : 11,
 WorkerAlreadyExists : 12,
 InvalidWorkerID : 13,
 InvalidOrganizationID : 14
+InvalidLocationID : 15
