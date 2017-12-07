@@ -1,0 +1,43 @@
+swagger: "2.0"
+info:
+  version: "1.0"
+  title: "docuinfo-tasks"
+host: "t3zri76bd2.execute-api.eu-central-1.amazonaws.com"
+basePath: "/Prod"
+schemes:
+- "https"
+paths:
+  /assign_task:
+    post:
+      parameters:
+        - in: body
+          name: body
+          schema: 
+            required:
+              - token
+              - workerID
+              - payload
+              - firebaseData
+            properties:
+              token:
+                type: string
+              workerID:
+                type: string
+              payload: 
+                type: object
+              firebaseData: 
+                type: object
+              
+      responses:
+        '200':
+          description: |-
+            {
+            "message": "success"
+            }
+        '400':
+          description: |-
+            {
+            "error" : "error message"
+            }
+
+ 
