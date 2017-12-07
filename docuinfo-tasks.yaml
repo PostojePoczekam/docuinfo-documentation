@@ -1,0 +1,150 @@
+swagger: '2.0'
+info:
+  version: '1.0'
+  title: docuinfo-tasks
+host: tba
+basePath: /Prod
+schemes:
+  - https
+paths:
+  /create_task:
+    post:
+      parameters:
+        - in: body
+          name: body
+          schema: 
+            required:
+              - token
+              - workerID
+              - subject
+              - description
+              - priority
+              - dueDate
+            properties:
+              token:
+                type: string
+              workerID:
+                type: integer
+              subject:
+                type: string
+              description:
+                type: string
+              priority:
+                type: integer
+              dueDate:
+                type: string
+                format: date
+      responses:
+        '200':
+          description: |-
+            {
+            "message": "success",
+            "taskID" : x
+            }
+        '400':
+          description: |-
+            {
+            "error" : "error message"
+            }
+  /get_tasks:
+    post:
+      parameters:
+        - in: body
+          name: body
+          description: "Worker gets only his own tasks, admin gets tasks from whole company"
+          schema: 
+            required:
+              - token
+              - companyID
+            properties:
+              token:
+                type: string
+              companyID:
+                type: integer
+      responses:
+        '200':
+          description: |-
+            {
+            "message": "success",
+            "tasks": [{ }]
+            }
+        '400':
+          description: |-
+            {
+            "error" : "error message"
+            }
+  /accept_task:
+    post:
+      parameters:
+        - in: body
+          name: body
+          schema: 
+            required:
+              - token
+              - taskID
+            properties:
+              token:
+                type: string
+              taskID:
+                type: integer
+      responses:
+        '200':
+          description: |-
+            {
+            "message" : "success"
+            }
+        '400':
+          description: |-
+            {
+            "error" : "error message"
+            }
+  /reject_task:
+    post:
+      parameters:
+        - in: body
+          name: body
+          schema: 
+            required:
+              - token
+              - taskID
+            properties:
+              token:
+                type: string
+              taskID:
+                type: integer
+      responses:
+        '200':
+          description: |-
+            {
+            "message" : "success"
+            }
+        '400':
+          description: |-
+            {
+            "error" : "error message"
+            }
+  /delete_task:
+    post:
+      parameters:
+        - in: body
+          name: body
+          schema: 
+            required:
+              - token
+              - taskID
+            properties:
+              token:
+                type: string
+              taskID:
+                type: integer
+      responses:
+        '200':
+          description: |-
+            {
+            "message" : "success"
+            }
+        '400':
+          description: |-
+            {
+            "error" : "error message"
+            }
