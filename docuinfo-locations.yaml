@@ -15,10 +15,13 @@ paths:
           schema: 
             required:
               - token
+              - companyID
               - data
             properties:
               token:
                 type: string
+              companyID:
+                type: integer
               data:
                 type: object
       responses:
