@@ -28,7 +28,8 @@ paths:
             {
             "message": "success",
             "token": "TOKEN",
-            "data": { }
+            "data": { },
+            "subscribed" : true
             }
         '400':
           description: |-
