@@ -2,7 +2,7 @@ swagger: '2.0'
 info:
   version: '1.0'
   title: docuinfo-tasks
-host: tba
+host: 99n0ldu6h7.execute-api.eu-central-1.amazonaws.com
 basePath: /Prod
 schemes:
   - https
