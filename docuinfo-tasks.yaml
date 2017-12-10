@@ -16,24 +16,14 @@ paths:
             required:
               - token
               - workerID
-              - subject
-              - description
-              - priority
-              - dueDate
+              - data
             properties:
               token:
                 type: string
               workerID:
                 type: integer
-              subject:
-                type: string
-              description:
-                type: string
-              priority:
-                type: integer
-              dueDate:
-                type: string
-                format: date
+              data:
+                type: object
       responses:
         '200':
           description: |-
@@ -55,11 +45,11 @@ paths:
           schema: 
             required:
               - token
-              - companyID
+              - organizationID
             properties:
               token:
                 type: string
-              companyID:
+              organizationID:
                 type: integer
       responses:
         '200':
@@ -99,31 +89,6 @@ paths:
             "error" : "error message"
             }
   /reject_task:
-    post:
-      parameters:
-        - in: body
-          name: body
-          schema: 
-            required:
-              - token
-              - taskID
-            properties:
-              token:
-                type: string
-              taskID:
-                type: integer
-      responses:
-        '200':
-          description: |-
-            {
-            "message" : "success"
-            }
-        '400':
-          description: |-
-            {
-            "error" : "error message"
-            }
-  /delete_task:
     post:
       parameters:
         - in: body
