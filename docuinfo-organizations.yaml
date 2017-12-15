@@ -1,39 +1,13 @@
----
-swagger: "2.0"
+swagger: '2.0'
 info:
-  version: "1.0"
-  title: "docuinfo-workers"
-host: "t3zri76bd2.execute-api.eu-central-1.amazonaws.com"
-basePath: "/Prod"
+  version: '1.0'
+  title: docuinfo-organizations
+host: attydpd6w8.execute-api.eu-central-1.amazonaws.com
+basePath: /Prod
 schemes:
-- "https"
+  - https
 paths:
-  /add_worker:
-    post:
-      parameters:
-        - in: body
-          name: body
-          schema: 
-            required:
-              - token
-              - workerEmail
-            properties:
-              token:
-                type: string
-              workerEmail:
-                type: string
-      responses:
-        '200':
-          description: |-
-            {
-            "message": "success"
-            }
-        '400':
-          description: |-
-            {
-            "error" : "error message"
-            }
-  /get_workers:
+  /get_organizations:
     post:
       parameters:
         - in: body
@@ -49,14 +23,14 @@ paths:
           description: |-
             {
             "message": "success",
-            "workers": []
+            "organizations": [{ }]
             }
         '400':
           description: |-
             {
             "error" : "error message"
             }
-  /remove_worker:
+  /leave_organization:
     post:
       parameters:
         - in: body
@@ -64,21 +38,20 @@ paths:
           schema: 
             required:
               - token
-              - workerID
+              - organizationID
             properties:
               token:
                 type: string
-              workerID:
+              organizationID:
                 type: integer
       responses:
         '200':
           description: |-
             {
-            "message": "success"
+            "message" : "success"
             }
         '400':
           description: |-
             {
             "error" : "error message"
             }
-
