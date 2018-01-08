@@ -1,0 +1,99 @@
+swagger: '2.0'
+info:
+  version: '1.0'
+  title: docuinfo-protocols
+host: numwv2ufy7.execute-api.eu-central-1.amazonaws.com
+basePath: /Prod
+schemes:
+  - https
+paths:
+  /create_protocol:
+    post:
+      parameters:
+        - in: body
+          name: body
+          schema: 
+            properties:
+              token:
+                type: string
+              creationDate:
+                type: string
+                format: date-time
+              locationID:
+                type: integer
+              geoLocation:
+                type: string
+              fields:
+                type: array
+                items: 
+                  type: object
+                  properties:
+                    name:
+                      type: string
+                    type:
+                      type: string
+                    value:
+                      type: string
+      responses:
+        '200':
+          description: |-
+            {
+            "message": "success",
+            "protocolID" : x
+            }
+        '400':
+          description: |-
+            {
+            "error" : "error message"
+            }
+  /get_protocols:
+    post:
+      parameters:
+        - in: body
+          name: body
+          schema: 
+            required:
+              - token
+              - locationID
+            properties:
+              token:
+                type: string
+              companyID:
+                type: integer
+      responses:
+        '200':
+          description: |-
+            {
+            "message": "success",
+            "protocols": [{ }]
+            }
+        '400':
+          description: |-
+            {
+            "error" : "error message"
+            }
+  /delete_protocol:
+    post:
+      parameters:
+        - in: body
+          name: body
+          schema: 
+            required:
+              - token
+              - protocolID
+            properties:
+              token:
+                type: string
+              locationID:
+                type: integer
+      responses:
+        '200':
+          description: |-
+            {
+            "message" : "success"
+            }
+        '400':
+          description: |-
+            {
+            "error" : "error message"
+            }
