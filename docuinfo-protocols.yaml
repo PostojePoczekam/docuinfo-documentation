@@ -22,7 +22,12 @@ paths:
               locationID:
                 type: integer
               geoLocation:
-                type: string
+                type: object
+                properties:
+                    latitude:
+                      type: number
+                    longitude:
+                      type: number
               fields:
                 type: array
                 items: 
