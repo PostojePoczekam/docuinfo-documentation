@@ -39,6 +39,8 @@ paths:
                       type: string
                     value:
                       type: string
+              data:
+                type: object
       responses:
         '200':
           description: |-
