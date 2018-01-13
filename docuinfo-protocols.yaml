@@ -107,7 +107,7 @@ paths:
             properties:
               token:
                 type: string
-              locationID:
+              protocolID:
                 type: integer
               photoBase64:
                 type: string
@@ -124,3 +124,27 @@ paths:
             {
             "error" : "error message"
             }
+  /get_photos:
+    post:
+      parameters:
+        - in: body
+          name: body
+          schema: 
+            properties:
+              token:
+                type: string
+              protocolID:
+                type: integer
+      responses:
+        '200':
+          description: |-
+            {
+            "message" : "success"
+            "photos" : []
+            }
+        '400':
+          description: |-
+            {
+            "error" : "error message"
+            }
+  
