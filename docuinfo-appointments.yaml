@@ -1,0 +1,90 @@
+swagger: '2.0'
+info:
+  version: '1.0'
+  title: docuinfo-appointments
+host: xD
+basePath: /Prod
+schemes:
+  - https
+paths:
+  /create_appointment:
+    post:
+      parameters:
+        - in: body
+          name: body
+          schema: 
+            required:
+              - token
+              - workerID
+              - data
+            properties:
+              token:
+                type: string
+              workerID:
+                type: integer
+              data:
+                type: object
+      responses:
+        '200':
+          description: |-
+            {
+            "message": "success",
+            "appointmentID" : x
+            }
+        '400':
+          description: |-
+            {
+            "error" : "error message"
+            }
+  /get_appointments:
+    post:
+      parameters:
+        - in: body
+          name: body
+          description: "Worker gets only his own appointments, admin gets appointments from whole company"
+          schema: 
+            required:
+              - token
+              - organizationID
+            properties:
+              token:
+                type: string
+              organizationID:
+                type: integer
+      responses:
+        '200':
+          description: |-
+            {
+            "message": "success",
+            "appointments": [{ }]
+            }
+        '400':
+          description: |-
+            {
+            "error" : "error message"
+            }
+  /delete_appointment:
+    post:
+      parameters:
+        - in: body
+          name: body
+          schema: 
+            required:
+              - token
+              - taskID
+            properties:
+              token:
+                type: string
+              taskID:
+                type: integer
+      responses:
+        '200':
+          description: |-
+            {
+            "message" : "success"
+            }
+        '400':
+          description: |-
+            {
+            "error" : "error message"
+            }
