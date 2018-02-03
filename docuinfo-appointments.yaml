@@ -2,7 +2,7 @@ swagger: '2.0'
 info:
   version: '1.0'
   title: docuinfo-appointments
-host: xD
+host: bsdhug1dy5.execute-api.eu-central-1.amazonaws.com
 basePath: /Prod
 schemes:
   - https

@@ -12,5 +12,10 @@ GroupAlreadyExists : 10,
 InvalidGroupID : 11,
 WorkerAlreadyExists : 12,
 InvalidWorkerID : 13,
-InvalidOrganizationID : 14
-InvalidLocationID : 15
+InvalidOrganizationID : 14,
+InvalidLocationID : 15,
+InvalidTaskID : 16,
+InvalidTemplateID : 17,
+InvalidProtocolID : 18,
+ConnectionError : 19,
+InvalidAppointmentID : 20
