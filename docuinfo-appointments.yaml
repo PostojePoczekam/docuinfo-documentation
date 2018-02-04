@@ -36,6 +36,35 @@ paths:
             {
             "error" : "error message"
             }
+  /create_appointment_self:
+    post:
+      parameters:
+        - in: body
+          name: body
+          schema: 
+            required:
+              - token
+              - organizationID
+              - data
+            properties:
+              token:
+                type: string
+              organizationID:
+                type: integer
+              data:
+                type: object
+      responses:
+        '200':
+          description: |-
+            {
+            "message": "success",
+            "appointmentID" : x
+            }
+        '400':
+          description: |-
+            {
+            "error" : "error message"
+            }
   /get_appointments:
     post:
       parameters:
