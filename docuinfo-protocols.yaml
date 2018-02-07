@@ -9,8 +9,7 @@ schemes:
 paths:
   /create_protocol:
     post:
-      description:
-        Create protocol
+      description: "Create protocol"
       parameters:
         - in: body
           name: body
