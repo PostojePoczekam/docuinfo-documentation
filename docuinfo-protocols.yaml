@@ -9,6 +9,8 @@ schemes:
 paths:
   /create_protocol:
     post:
+      description:
+        Create protocol
       parameters:
         - in: body
           name: body
@@ -55,6 +57,8 @@ paths:
             }
   /get_protocols:
     post:
+      description:
+        Get protocols
       parameters:
         - in: body
           name: body
@@ -78,6 +82,8 @@ paths:
             }
   /delete_protocol:
     post:
+      description:
+        Delete protocol
       parameters:
         - in: body
           name: body
@@ -100,6 +106,8 @@ paths:
             }
   /upload_photo:
     post:
+      description:
+        Upload photo
       parameters:
         - in: body
           name: body
@@ -126,6 +134,8 @@ paths:
             }
   /get_photos:
     post:
+      description:
+        Get photos
       parameters:
         - in: body
           name: body
