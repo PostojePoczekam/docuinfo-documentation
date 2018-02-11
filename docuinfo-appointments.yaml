@@ -100,11 +100,11 @@ paths:
           schema: 
             required:
               - token
-              - taskID
+              - appointmentID
             properties:
               token:
                 type: string
-              taskID:
+              appointmentID:
                 type: integer
       responses:
         '200':
