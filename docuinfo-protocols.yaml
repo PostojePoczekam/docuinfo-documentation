@@ -9,10 +9,13 @@ schemes:
 paths:
   /create_protocol:
     post:
+      summary: Create protocol
+      description: ''
       parameters:
         - in: body
           name: body
           schema: 
+            type: object
             properties:
               token:
                 type: string
@@ -55,10 +58,13 @@ paths:
             }
   /get_protocols:
     post:
+      summary: Get protocols
+      description: ''
       parameters:
         - in: body
           name: body
           schema:
+            type: object
             properties:
               token:
                 type: string
@@ -78,10 +84,13 @@ paths:
             }
   /delete_protocol:
     post:
+      summary: Delete protocol
+      description: ''
       parameters:
         - in: body
           name: body
           schema: 
+            type: object
             properties:
               token:
                 type: string
@@ -100,10 +109,13 @@ paths:
             }
   /upload_photo:
     post:
+      summary: Upload photo
+      description: ''
       parameters:
         - in: body
           name: body
-          schema: 
+          schema:
+            type: object
             properties:
               token:
                 type: string
@@ -126,10 +138,13 @@ paths:
             }
   /get_photos:
     post:
+      summary: Get photos
+      description: ''
       parameters:
         - in: body
           name: body
-          schema: 
+          schema:
+            type: object
             properties:
               token:
                 type: string
@@ -147,4 +162,3 @@ paths:
             {
             "error" : "error message"
             }
-  
