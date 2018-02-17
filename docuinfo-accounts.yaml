@@ -62,6 +62,31 @@ paths:
             {
             "error" : "error message"
             }
+  /upload_photo:
+    post:
+      parameters:
+        - in: body
+          name: body
+          schema: 
+            required:
+              - token
+              - photoBase64
+            properties:
+              token:
+                type: string
+              data:
+                type: string
+      responses:
+        '200':
+          description: |-
+            {
+            "message": "success"
+            }
+        '400':
+          description: |-
+            {
+            "error" : "error message"
+            }
   /get_account:
     post:
       parameters:
