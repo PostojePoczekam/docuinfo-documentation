@@ -1,0 +1,38 @@
+swagger: '2.0'
+info:
+  version: '1.0'
+  title: docuinfo-photos
+host: s3.eu-central-1.amazonaws.com
+schemes:
+  - https
+paths:
+  '/docuinfo-users-photos/{id}':
+    get:
+      summary: Get user photo
+      description: Returns a user photo in png format
+      parameters:
+        - name: id
+          in: path
+          description: ID of user to return
+          required: true
+          type: string
+      responses:
+        '200':
+          description: "Photo file"
+        '400':
+          description: "Invalid id/photo not found"
+  '/docuinfo-companies-photos/{id}':
+    get:
+      summary: Get company photo
+      description: Returns a company photo in png format
+      parameters:
+        - name: id
+          in: path
+          description: ID of company to return
+          required: true
+          type: string
+      responses:
+        '200':
+          description: "Photo file"
+        '400':
+          description: "Invalid id/photo not found"
