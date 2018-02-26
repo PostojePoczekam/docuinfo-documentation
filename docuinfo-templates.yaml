@@ -7,6 +7,45 @@ basePath: /Prod
 schemes:
   - https
 paths:
+  /create_template:
+    post:
+      parameters:
+        - in: body
+          name: body
+          schema: 
+            required:
+              - token
+              - companyID
+              - name
+              - fields
+            properties:
+              token:
+                type: string
+              companyID:
+                type: integer
+              name:
+                type: string
+              fields:
+                type: array
+                items: 
+                  type: object
+                  properties:
+                    name:
+                      type: string
+                    type:
+                      type: string
+      responses:
+        '200':
+          description: |-
+            {
+            "message": "success",
+            "templateID": 0
+            }
+        '400':
+          description: |-
+            {
+            "error" : "error message"
+            }
   /get_templates:
     post:
       parameters:
@@ -27,6 +66,66 @@ paths:
             {
             "message": "success",
             "templates": [{ }]
+            }
+        '400':
+          description: |-
+            {
+            "error" : "error message"
+            }
+  /edit_template:
+    post:
+      parameters:
+        - in: body
+          name: body
+          schema: 
+            required:
+              - token
+              - templateID
+              - fields
+            properties:
+              token:
+                type: string
+              templateID:
+                type: integer
+              fields:
+                type: array
+                items: 
+                  type: object
+                  properties:
+                    name:
+                      type: string
+                    type:
+                      type: string
+      responses:
+        '200':
+          description: |-
+            {
+            "message": "success"
+            }
+        '400':
+          description: |-
+            {
+            "error" : "error message"
+            }
+  /delete_template:
+    post:
+      parameters:
+        - in: body
+          name: body
+          schema: 
+            required:
+              - token
+              - templateID
+            properties:
+              token:
+                type: string
+              templateID:
+                type: integer
+      responses:
+        '200':
+          description: |-
+            {
+            "message": "success"
             }
         '400':
           description: |-
