@@ -107,6 +107,31 @@ paths:
             {
             "error" : "error message"
             }
+  /export_protocol:
+    post:
+      summary: Export protocol
+      description: ''
+      parameters:
+        - in: body
+          name: body
+          schema: 
+            type: object
+            properties:
+              token:
+                type: string
+              protocolID:
+                type: integer
+      responses:
+        '200':
+          description: |-
+            {
+            "message" : "success"
+            }
+        '400':
+          description: |-
+            {
+            "error" : "error message"
+            }
   /upload_photo:
     post:
       summary: Upload photo
