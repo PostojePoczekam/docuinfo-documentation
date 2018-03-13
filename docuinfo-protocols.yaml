@@ -125,6 +125,7 @@ paths:
         '200':
           description: |-
             {
+            "protocol" : "protocol"
             "message" : "success"
             }
         '400':
