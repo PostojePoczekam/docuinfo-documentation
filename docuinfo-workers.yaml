@@ -81,4 +81,37 @@ paths:
             {
             "error" : "error message"
             }
-
+  /invite_worker:
+    post:
+      parameters:
+        - in: body
+          name: body
+          schema: 
+            required:
+              - token
+              - email
+              - from
+              - to
+              - message
+            properties:
+              token:
+                type: string
+              email:
+                type: string
+              from:
+                type: string
+              to:
+                type: string
+              message:
+                type: string
+      responses:
+        '200':
+          description: |-
+            {
+            "message": "success"
+            }
+        '400':
+          description: |-
+            {
+            "error" : "error message"
+            }
