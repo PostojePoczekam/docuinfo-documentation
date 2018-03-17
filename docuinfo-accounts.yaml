@@ -210,4 +210,34 @@ paths:
             {
             "error" : "error message"
             }
-
+  /send_feedback:
+    post:
+      parameters:
+        - in: body
+          name: body
+          schema: 
+            required:
+              - token
+              - version
+              - appName
+              - feedback
+            properties:
+              token:
+                type: string
+              version:
+                type: string
+              appName:
+                type: string
+              feedback:
+                type: string
+      responses:
+        '200':
+          description: |-
+            {
+            "message": "success"
+            }
+        '400':
+          description: |-
+            {
+            "error" : "error message"
+            }
