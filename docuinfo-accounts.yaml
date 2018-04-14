@@ -3,10 +3,10 @@ swagger: "2.0"
 info:
   version: "1.0"
   title: "docuinfo-accounts"
-host: "n8kuinozu6.execute-api.eu-central-1.amazonaws.com"
-basePath: "/Prod"
+host: "18.196.197.222"
+basePath: "/accounts"
 schemes:
-- "https"
+- "http"
 paths:
   /create_account:
     post:
@@ -229,6 +229,28 @@ paths:
               appName:
                 type: string
               feedback:
+                type: string
+      responses:
+        '200':
+          description: |-
+            {
+            "message": "success"
+            }
+        '400':
+          description: |-
+            {
+            "error" : "error message"
+            }
+  /confirm_email:
+    post:
+      parameters:
+        - in: body
+          name: body
+          schema: 
+            required:
+              - token
+            properties:
+              token:
                 type: string
       responses:
         '200':
