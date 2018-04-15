@@ -17,11 +17,52 @@ paths:
             required:
               - token
               - name
+              - companies
+              - spectator
             properties:
               token:
                 type: string
               name:
                 type: string
+              companies:
+                type: array
+                items:
+                  type: integer
+              spectator:
+                type: boolean
+      responses:
+        '200':
+          description: |-
+            {
+            "message": "success"
+            }
+        '400':
+          description: |-
+            {
+            "errorCode" : 0
+            }
+  /update_group:
+    post:
+      parameters:
+        - in: body
+          name: body
+          schema: 
+            required:
+              - token
+              - groupID
+              - companies
+              - spectator
+            properties:
+              token:
+                type: string
+              groupID:
+                type: integer
+              companies:
+                type: array
+                items:
+                  type: integer
+              spectator:
+                type: boolean
       responses:
         '200':
           description: |-
@@ -58,4 +99,26 @@ paths:
             {
             "errorCode" : 0
             }
-
+  /get_groups:
+    post:
+      parameters:
+        - in: body
+          name: body
+          schema: 
+            required:
+              - token
+            properties:
+              token:
+                type: string
+      responses:
+        '200':
+          description: |-
+            {
+            "message": "success",
+            "groups" : [{}]
+            }
+        '400':
+          description: |-
+            {
+            "errorCode" : 0
+            }

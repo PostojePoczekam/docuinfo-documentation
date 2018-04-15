@@ -56,6 +56,34 @@ paths:
             {
             "error" : "error message"
             }
+  /assign_worker:
+    post:
+      parameters:
+        - in: body
+          name: body
+          schema: 
+            required:
+              - token
+              - workerID
+              - groupID
+            properties:
+              token:
+                type: string
+              workerID:
+                type: integer
+              groupID:
+                type: integer
+      responses:
+        '200':
+          description: |-
+            {
+            "message": "success"
+            }
+        '400':
+          description: |-
+            {
+            "error" : "error message"
+            }
   /remove_worker:
     post:
       parameters:
