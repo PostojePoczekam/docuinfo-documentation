@@ -110,6 +110,53 @@ paths:
             {
             "error" : "error message"
             }
+  /request_password:
+    post:
+      parameters:
+        - in: body
+          name: body
+          schema: 
+            required:
+              - email
+            properties:
+              token:
+                type: string
+      responses:
+        '200':
+          description: |-
+            {
+            "message": "success"
+            }
+        '400':
+          description: |-
+            {
+            "error" : "error message"
+            }
+  /reset_password:
+    post:
+      parameters:
+        - in: body
+          name: body
+          schema: 
+            required:
+              - token
+              - newPassword
+            properties:
+              token:
+                type: string
+              newPassword:
+                type: string
+      responses:
+        '200':
+          description: |-
+            {
+            "message": "success"
+            }
+        '400':
+          description: |-
+            {
+            "error" : "error message"
+            }
   /change_password:
     post:
       parameters:
