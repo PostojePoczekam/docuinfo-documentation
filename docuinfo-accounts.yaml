@@ -3,7 +3,7 @@ swagger: "2.0"
 info:
   version: "1.0"
   title: "docuinfo-accounts"
-host: "18.196.197.222"
+host: "api"
 basePath: "/accounts"
 schemes:
 - "http"

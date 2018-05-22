@@ -19,4 +19,5 @@ InvalidTemplateID : 17,
 InvalidProtocolID : 18,
 ConnectionError : 19,
 InvalidAppointmentID : 20,
-EmailNotConfirmed : 21
+EmailNotConfirmed : 21,
+OrganizationNotPaid : 22
