@@ -1,0 +1,21 @@
+{
+
+ "email": string,
+ 
+ "password": string,
+ 
+ "data" : {
+    "firstName" : string,
+    
+    "lastName" : string,
+   
+    "address" : string,
+    
+    "latitude" : double,
+    
+    "longitude" : double,
+    
+    "fcmToken" : string
+ }
+ 
+}
