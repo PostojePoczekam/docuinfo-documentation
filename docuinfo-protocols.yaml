@@ -44,6 +44,19 @@ paths:
                       type: string
               data:
                 type: object
+            example:
+              token: 5P13RD4L4J5L3D21U
+              creationDate: "2018-01-01 21:37"
+              locationID: 0
+              geoLocation: {latitude: 0, longitude: 0}
+              fields: [
+                {name: Food order, type: header},
+                {name: Your name, type: string, value: Maciej Nowak},
+                {name: Your order, type: choice, value: Spaghetti},
+                {name: Delivery time, type: time, value: "22:22"},
+              ]
+              data: {} #developer specified data
+              
       responses:
         '200':
           description: |-
