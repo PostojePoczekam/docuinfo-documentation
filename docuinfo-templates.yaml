@@ -41,11 +41,12 @@ paths:
             example:
               token: 5P13RD4L4J5L3D21U
               companyID: 0
+              name: Food order example template
               fields: [
                 {name: Food order, type: header},
                 {name: Your name, type: string},
                 {name: Your order, type: choice, options: [Kebab, Pizza, Hot Dog]},
-                {name: Delivery time, type: time}
+                {name: Delivery time, type: time},
               ]
                     
       responses:
