@@ -134,6 +134,12 @@ paths:
                 type: string
               protocolID:
                 type: integer
+              language:
+                type: string
+            example:
+              token: 5P13RD4L4J5L3D21U
+              protocolID: 0
+              language: de
       responses:
         '200':
           description: |-
