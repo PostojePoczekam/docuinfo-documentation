@@ -18,6 +18,7 @@ paths:
               - companyID
               - name
               - fields
+              - signatures
             properties:
               token:
                 type: string
@@ -38,6 +39,15 @@ paths:
                       type: array
                       items:
                         type: string
+              signatures:
+                type: array
+                items: 
+                  type: object
+                  properties:
+                    name:
+                      type: string
+                    displayDate:
+                      type: boolean
             example:
               token: 5P13RD4L4J5L3D21U
               companyID: 0
@@ -46,9 +56,12 @@ paths:
                 {name: Food order, type: header},
                 {name: Your name, type: string},
                 {name: Your order, type: choice, options: [Kebab, Pizza, Hot Dog]},
-                {name: Delivery time, type: time},
+                {name: Delivery time, type: time}
               ]
-                    
+              signatures: [
+                {name: Car owner, displayDate: false},
+                {name: Customer, displayDate: true}
+              ]
       responses:
         '200':
           description: |-
