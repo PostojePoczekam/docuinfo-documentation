@@ -55,3 +55,50 @@ paths:
             {
             "error" : "error message"
             }
+  /upload_photo:
+    post:
+      parameters:
+        - in: body
+          name: body
+          schema: 
+            required:
+              - token
+              - photoBase64
+            properties:
+              token:
+                type: string
+              photoBase64:
+                type: string
+      responses:
+        '200':
+          description: |-
+            {
+            "message" : "success"
+            }
+        '400':
+          description: |-
+            {
+            "error" : "error message"
+            }
+  /delete_photo:
+    post:
+      parameters:
+        - in: body
+          name: body
+          schema: 
+            required:
+              - token
+            properties:
+              token:
+                type: string
+      responses:
+        '200':
+          description: |-
+            {
+            "message" : "success"
+            }
+        '400':
+          description: |-
+            {
+            "error" : "error message"
+            }
